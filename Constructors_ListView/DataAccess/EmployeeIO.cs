@@ -35,7 +35,7 @@ namespace Constructors_ListView.DataAccess
             {
                 //Create the object of readtype!!!!!
                 StreamReader sReader = new StreamReader(filePath);
-                string line = sReader.ReadLine();
+                string line = sReader.ReadLine(); 
             }
 
             return emp;
