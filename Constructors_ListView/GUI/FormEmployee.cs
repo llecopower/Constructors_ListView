@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Constructors_ListView
+namespace Constructors_ListView.GUI
 {
-    public partial class Form1 : Form
+    public partial class FormEmployee : Form
     {
-        public Form1()
+        public FormEmployee()
         {
             InitializeComponent();
+        }
+
+        private void FormEmployee_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
