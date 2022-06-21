@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Constructors_ListView.DataAccess;
 
 namespace Constructors_ListView
 {
@@ -17,14 +18,13 @@ namespace Constructors_ListView
 
         public void SaveEmployee(Employee emp)
         { 
-            //code later
+            EmployeeIO.SaveRecord(emp);
         
         }
 
         public Employee SearchEmployee(int id)
         {
-            //Code later
-            return SearchEmployee(id);
+           return EmployeeIO.SearchRecord(id);
         }
 
 

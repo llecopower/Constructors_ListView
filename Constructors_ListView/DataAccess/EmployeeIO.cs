@@ -35,10 +35,52 @@ namespace Constructors_ListView.DataAccess
             {
                 //Create the object of readtype!!!!!
                 StreamReader sReader = new StreamReader(filePath);
-                string line = sReader.ReadLine(); 
+                string line = sReader.ReadLine();
+
+                bool found = false;
+
+                while (line != null)
+                {
+                    string[] fields = line.Split(',');
+                    if (Convert.ToInt32(fields[0]) == id)
+
+                    {
+                        emp.EmployeeId = Convert.ToInt32(fields[0]);
+                        emp.FirstName = fields[1];
+                        emp.LastName = fields[2];
+
+                        found = true;
+                        break;
+                    }
+
+                    line = sReader.ReadLine();
+                }
+
+                sReader.Close();
+
+                //Not Found
+                if (!found)
+                {
+                    emp = null;
+
+                }
             }
 
+            else
+            {
+                MessageBox.Show("File not Foound!");
+           
+            }
             return emp;
+        }
+
+        public static Employee SearchRecord(string input)
+
+        {
+            Employee emp = new Employee();
+
+            return emp;
+
         }
 
 
