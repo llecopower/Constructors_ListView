@@ -16,5 +16,42 @@ namespace Constructors_ListView.GUI
         {
             InitializeComponent();
         }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            emp.EmployeeId = Convert.ToInt32(textBoxEmpId.Text);
+            emp.FirstName = textBoxFirstName.Text;
+            emp.LastName = textBoxLastName.Text;
+
+            emp.SaveEmployee(emp);
+
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+
+            Employee emp = new Employee();
+
+            emp = emp.SearchEmployee(Convert.ToInt32(textBoxEmpId.Text));
+
+            if (emp != null)
+            {
+                ListViewItem item = new ListViewItem(emp.EmployeeId.ToString());
+                item.SubItems.Add(emp.FirstName);
+                item.SubItems.Add(emp.LastName);
+
+                listViewEmp.Items.Add(item);
+            }
+
+            else
+            {
+                MessageBox.Show("employee Not Found!");
+            }
+
+
+
+
+        }
     }
 }
