@@ -71,6 +71,7 @@
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonList
             // 
@@ -80,6 +81,7 @@
             this.buttonList.TabIndex = 4;
             this.buttonList.Text = "List";
             this.buttonList.UseVisualStyleBackColor = true;
+            this.buttonList.Click += new System.EventHandler(this.buttonList_Click);
             // 
             // label1
             // 

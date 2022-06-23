@@ -18,8 +18,8 @@ namespace Constructors_ListView
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           // Application.Run(new FormEmployee());
-            Application.Run(new FormEmployee2());
+            Application.Run(new FormEmployee());
+           // Application.Run(new FormEmployee2());
         }
     }
 }
